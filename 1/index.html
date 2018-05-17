@@ -10,8 +10,38 @@ Tip: Investigar el evento window.onload
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		console.log("DOM cargado");
+    		alert("DOM cargado")
+    	});
+ 		
+ 		$(window).on("load", function(){
+ 			console.log("Las imaganes se cargaron");
+ 			alert("Las imaganes se cargaron");
+ 		});
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+    body{
+	 margin: 0 auto;
+    } 
+
+    img {
+	 width: 40%;
+	 height: auto;
+
+    }
+    </style>
   </head>
   <body>
-
+  	<section>
+  		<img src="../images/IMG_0637.jpg" alt="">
+  		<img src="../images/IMG_1091.jpg" alt="">
+  		<img src="../images/IMG_2295.jpg" alt="">
+  		<img src="../images/IMG_2294.jpg" alt="">
+  	</section>
   </body>
 </html>

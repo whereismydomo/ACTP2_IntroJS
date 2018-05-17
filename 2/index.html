@@ -12,8 +12,40 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <style>
+    body{
+	margin: 0 auto;
+    } 
+
+    img {
+	width: 40%;
+	height: auto;
+    }
+    .blackandgrey{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    }
+
+    </style>
+
+
   </head>
   <body>
+
+  	<section>
+  		<img src="../images/IMG_0637.jpg" alt="" class="blackandgrey">
+  		<img src="../images/IMG_1091.jpg" alt="" class="blackandgrey">
+  		<img src="../images/IMG_2295.jpg" alt="" class="blackandgrey">
+  		<img src="../images/IMG_2294.jpg" alt="" class="blackandgrey">
+  	</section>
+
+  	<script>
+    	$("img").on("click", function(){
+    		$(this).toggleClass("blackandgrey");
+    		});
+    </script>
 
   </body>
 </html>
